@@ -1,0 +1,17 @@
+<!-- nav -->
+<div class="side-nav nav-collapsed" id="navContainer">
+  <a href="/">
+    <img src="{{ 'sidenav-logo-static.png' | asset_url }}" width="25px" height="22px" class="branding" />
+  </a>
+  <ul>
+    {% for link in linklists.sidebar.links %}
+    <li>
+      <a href="{{ link.url }}" class="highlight-hover">{{ link.title }}</a>
+    </li>
+    {% endfor %}
+    <li>
+      <a href="javascript:void(0)" onclick="contactKey()" class="highlight-hover">talk</a>
+    </li>
+  </ul>
+</div>
+<!-- /nav -->

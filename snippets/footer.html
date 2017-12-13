@@ -1,0 +1,111 @@
+</div>
+
+{% if page.title != 'success' or page.layout != 'service' %}
+<footer onclick="contactKey()" class="blur">
+<div class="footer-content">
+  <div class="foot-copyright row-fullwidth {% if page.layout == 'project' %}bottom-bump-sm{% endif %}">
+    <div class="col-third col-half-md col-full-sm force-left">
+      <img src="{{ site.baseurl }}/assets/images/foot-logo.svg" />
+    </div>
+    <div class="col-third col-half-md col-full-sm">
+      <span class="footer-subhead">
+        © 2017
+      </span>
+    </div>
+    <div class="col-third force-right">
+      <span class="footer-subhead hide-sm">
+        Cold Brewed in Reno, Nevada
+      </span>
+    </div>
+  </div>
+  <div class="footer-cta">
+    <span class="footer-subhead">
+      Enough about us
+    </span>
+    <h1 class="highlight-hover-peach">Let's hear your story.</h1>
+    <span class="button-line-white">
+      Get in Touch
+    </span>
+  </div>
+</div>
+</footer>
+{% endif %}
+
+{% if page.footstandards %}
+<footer class="blur">
+  <a href="{{site.baseurl}}/culture">
+    <div class="footer-content footer foot-alt">
+      <div class="foot-copyright row-fullwidth {% if page.layout == 'project' %}bottom-bump-sm{% endif %}">
+        <div class="col-third col-half-md col-full-sm force-left">
+          <img src="{{ site.baseurl }}/assets/images/foot-logo.svg" />
+        </div>
+        <div class="col-third col-half-md col-full-sm">
+          <span class="footer-subhead">
+            © 2017
+          </span>
+        </div>
+        <div class="col-third force-right">
+          <span class="footer-subhead hide-sm">
+            Cold Brewed in Reno, Nevada
+          </span>
+        </div>
+      </div>
+      <div class="footer-cta">
+        <span class="footer-subhead">
+          Our Standards Are High
+        </span>
+        <h1 class="highlight-hover-peach">Our team is small & agile</h1>
+        <span class="button-line-white">
+          Meet the Team
+        </span>
+      </div>
+    </div>
+  </a>
+</footer>
+{% endif %}
+
+{% if page.layout == 'service' %}
+<footer onclick="contactKey()">
+<div class="footer-content">
+  <div class="foot-copyright row-fullwidth">
+    <div class="col-third force-left">
+      <img src="{{ site.baseurl }}/assets/images/foot-logo.svg" />
+    </div>
+    <div class="col-third">
+      <span class="footer-subhead">
+        © 2017
+      </span>
+    </div>
+    <div class="col-third force-right hide-sm">
+      <span class="footer-subhead">
+        Cold Brewed in Reno, Nevada
+      </span>
+    </div>
+  </div>
+  <div class="footer-cta">
+    <span class="footer-subhead-focus">
+      Need help with {{ page.title }}?
+    </span>
+    <h1 class="highlight-hover-peach">We're here to help.</h1>
+    <span class="button-line-white">
+      Get in Touch
+    </span>
+  </div>
+</div>
+</footer>
+{% endif  %}
+
+<!-- load css for javascript disabled browsers -->
+<noscript>
+  <link href='/assets/styles/main.css' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Heebo:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lato:100i' rel='stylesheet' type='text/css'>
+</noscript>
+
+<!-- load js -->
+<script src="{{ site.baseurl }}/assets/js/main.js">></script>
+
+</body>
+</html>
