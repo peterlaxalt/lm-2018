@@ -945,6 +945,59 @@ nav {
 					}
 				}
 			}
+			.lmnt-nav-menu {
+				display:flex;
+				flex-direction:row;
+				justify-content:flex-end;
+				align-items:center;
+				.lmnt-cart {
+					display:flex;
+					flex-direction:row;
+					justify-content:flex-start;
+					align-items:center;
+					.lmnt-cart-total {
+						color:$clr-white;
+						background-color:$clr-peach;
+						width:25px;
+						height:25px;
+						line-height:25px;
+						text-align:center;
+						border-radius:3px;
+						margin-right:$base/2;
+						font-family:$fnt-body;
+						font-size:10px;
+					}
+					svg {
+						stroke-width:1px;
+						stroke:$clr-roast;
+						transition:all 1s ease;
+						&:hover {
+							stroke:$clr-peach;
+						}
+					}
+				}
+				.lmnt-hamburger {
+					cursor:pointer;
+					position:relative;
+					width:45px;
+					height:45px;
+					margin:0 $base/4 0 $base/2;
+					.lmnt-bar {
+						height:2px;
+						width:100%;
+						background-color:$clr-roast;
+						position:absolute;
+						&:first-child {
+							top:15px;
+							left:0px;
+						}
+						&:last-child {
+							bottom:15px;
+							left:0px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
