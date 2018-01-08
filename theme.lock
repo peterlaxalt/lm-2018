@@ -11,10 +11,12 @@ assets/lazysizes.js:
   development: 2017-12-12T20:49:17-05:00   a27b15d827d7a26f9fa58fb6b4f9d4b6
 assets/match-media.min.js:
   development: 2017-12-12T20:49:17-05:00   d0bf06c458a236dcca39b3be8cf80ec5
+assets/otama.woff:
+  development: 2017-12-12T21:23:34-05:00   b3f43afc83b2a31dca3c4544988d705b
 assets/password.js:
   development: 2017-12-12T20:49:17-05:00   d826da9cb223a44d53a0c34f457e92dc
 assets/styles.scss.liquid:
-  development: 2017-12-12T21:20:35-05:00   3e791a9a6a5fccf614b27818f20f7e28
+  development: 2017-12-12T21:30:20-05:00   f77b1e9bf3d5e8f7478d53a6bb2f283f
 assets/theme.js:
   development: 2017-12-12T20:49:18-05:00   a390a613cb501235e64059969fca9891
 assets/theme.scss.liquid:
