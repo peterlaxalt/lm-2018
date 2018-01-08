@@ -32,10 +32,6 @@
 
   {% include 'social-meta-tags' %}
 
-  {% include 'lmnt-webfonts' %}
-  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
-  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
-
   <script>
     var theme = {
       strings: {
@@ -71,6 +67,10 @@
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lte IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
 
+  {% include 'lmnt-webfonts' %}
+  {{ 'theme.scss.css' | asset_url | stylesheet_tag }}
+  {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
+
   {{ content_for_header }}
 </head>
 
@@ -87,5 +87,6 @@
   </div>
 
   {% include 'lmnt-footer' %}
+
 </body>
 </html>

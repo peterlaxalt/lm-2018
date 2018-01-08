@@ -7,6 +7,8 @@ assets/gift-card.scss.liquid:
   development: 2017-12-12T20:49:17-05:00   647ae860a3a785081fa97f55b66cea83
 assets/ico-select.svg.liquid:
   development: 2017-12-12T20:49:17-05:00   28de0c672609528b7c55f6f47810784b
+assets/jquery-3.2.1.min.js:
+  development: 2018-01-08T01:57:58-05:00   c9f5aeeca3ad37bf2aa006139b935f0a
 assets/lazysizes.js:
   development: 2017-12-12T20:49:17-05:00   a27b15d827d7a26f9fa58fb6b4f9d4b6
 assets/match-media.min.js:
@@ -16,9 +18,9 @@ assets/otama.woff:
 assets/password.js:
   development: 2017-12-12T20:49:17-05:00   d826da9cb223a44d53a0c34f457e92dc
 assets/styles.scss.liquid:
-  development: 2018-01-08T01:26:32-05:00   fb156356f4676ba0c5edd1d263dfa8e8
-assets/theme.js:
-  development: 2017-12-12T20:49:18-05:00   a390a613cb501235e64059969fca9891
+  development: 2018-01-08T03:02:21-05:00   69e18ed1b7fb1b1b00da388343238d0a
+assets/theme.js.liquid:
+  development: 2018-01-08T02:03:21-05:00   a390a613cb501235e64059969fca9891
 assets/theme.scss.liquid:
   development: 2018-01-08T01:25:51-05:00   34d5a9005e930e747a9b28944b3c6014
 assets/vendor.js:
@@ -32,7 +34,7 @@ layout/gift_card.liquid:
 layout/password.liquid:
   development: 2017-12-12T20:49:18-05:00   6351674ea67c53e01643a5bea02f7d0a
 layout/theme.liquid:
-  development: 2018-01-08T01:43:09-05:00   7e6f4af7a364230b7236ae915459ad13
+  development: 2018-01-08T02:08:50-05:00   05628ebf6dd06d1ed6c7569d7305456b
 locales/de.json:
   development: 2017-12-12T20:49:18-05:00   b7cd7749b0a0d9df967227ee73bcbb7f
 locales/en.default.json:
@@ -63,12 +65,16 @@ snippets/comment.liquid:
   development: 2017-12-12T20:49:19-05:00   50406c82467014e1bbe15a62685b2536
 snippets/google-fonts.liquid:
   development: 2017-12-12T20:49:19-05:00   377ddc183ac7882100f47299bb8e0467
+snippets/ico-brandmark.liquid:
+  development: 2018-01-08T02:25:11-05:00   67bf277cf3667c7973e1be05eeed2296
+snippets/ico-cart.liquid:
+  development: 2018-01-08T02:24:04-05:00   c2d60f35ddc88e739c596b8d007c5edb
 snippets/image-style.liquid:
   development: 2017-12-12T20:49:20-05:00   2d807ad1f4831d306d8e190b89d45c00
 snippets/lmnt-footer.liquid:
   development: 2018-01-08T01:43:59-05:00   2e74a405a2e2d7d1f1da1478aed1f3ce
 snippets/lmnt-nav.liquid:
-  development: 2018-01-08T01:38:52-05:00   96d2bb1dae3b95fc8b8836e575406f7a
+  development: 2018-01-08T03:01:14-05:00   ef219af5cf8cb522f4284145f22af725
 snippets/lmnt-webfonts.liquid:
   development: 2018-01-08T01:26:51-05:00   ba99b6d90b03ea1dbd05a6f010132a9a
 snippets/no-blocks.liquid:
