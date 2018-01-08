@@ -26,7 +26,7 @@ assets/vendor.js:
 config/settings_data.json:
   development: 2017-12-12T20:49:16-05:00   5e567d968ba26d5ee1bd0a982d35e727
 config/settings_schema.json:
-  development: 2017-12-12T20:49:21-05:00   b7e337104d26104859b4006d3f685180
+  development: 2018-01-08T00:26:25-05:00   87c243c50466857e2000f1e8ded94267
 layout/gift_card.liquid:
   development: 2017-12-12T20:49:18-05:00   876374b0950e11992ce087d1d2bad3c8
 layout/password.liquid:

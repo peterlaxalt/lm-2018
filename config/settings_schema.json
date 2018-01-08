@@ -1,11 +1,11 @@
 [
   {
     "name": "theme_info",
-    "theme_name": "Debut",
-    "theme_author": "Shopify",
-    "theme_version": "1.9.1",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/using-themes\/themes-by-shopify\/debut",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
+    "theme_name": "L&M: WATCH",
+    "theme_author": "Peter Laxalt",
+    "theme_version": "2.8.0",
+    "theme_documentation_url": "https://github.com/peterlaxalt/lm-2018",
+    "theme_support_url": "mailto:pete@laxaltandmciver.co"
   },
   {
     "name": "Colors",
