@@ -148,4 +148,4 @@ Yay. Here's for animation. Simply add any of the tags below to add animation on 
 
 # Copyright
 
-Copyright (c) 2017 Laxalt & McIver - All Rights Reserved.
+Copyright (c) 2014 - 2018 Laxalt & McIver LLC: All Rights Reserved.
