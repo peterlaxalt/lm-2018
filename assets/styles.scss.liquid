@@ -19,31 +19,31 @@
 // ____________________
 //
 // +vendor: downloaded stuff
-// +-normalize
-// +-typed
+//// +-normalize
+//// +-typed
 //
 // +constants: constant variables throughout stylesheets
-// +-animation
-// +-mixins
-// +-base
-// +-palette
-// +-typography
+//// +-animation
+//// +-mixins
+//// +-base
+//// +-palette
+//// +-typography
 //
 // +structure: core building blocks
-// +-nav
-// +-footer
-// +-rows
-// +-columns
+//// +-nav
+//// +-footer
+//// +-rows
+//// +-columns
 //
 // +lmnts: reusable content, modular sections, building blocks
 // *** prefix with '.lmnt-' please
-// +-buttons
-// +-sections
-// +-articles
-// +-content
+//// +-buttons
+//// +-sections
+//// +-articles
+//// +-content
 //
 // +page: page specific styling & overall layout
-// +-page
+//// +-page
 // ____________________
 //
 //
@@ -57,7 +57,7 @@
 // *****************************
 // *****************************
 
-// +-normalize
+//// +-normalize
 * {
 	padding:0;
 	margin:0;
@@ -499,7 +499,7 @@ textarea {
   font: inherit; /* 2 */
 }
 
-// +-typed
+//// +-typed
 
 .typed-cursor {
     display:none;
@@ -515,7 +515,7 @@ textarea {
 // *****************************
 // *****************************
 
-// +-+-animation
+//// +-+-animation
 
 body {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
@@ -647,22 +647,57 @@ body {
 
 
 
-// +-mixins
+//// +-mixins
 
 
 
-// +-base
+//// +-base
 $base-max-width:1440px;
 $base:45px;
 
 
 
-// +-palette
+//// +-palette
 
+// primary
+$clr-brown:#302A24;
+$clr-ice:#F6F8FB;
+$clr-yellow:#FCFF5F;
+$clr-white:#ffffff;
+$clr-black:#302A24;
+$clr-peach:#FF8E6F;
 
+// tertiary
+$clr-pink:#FFA8CE;
+$clr-lemon:#FCFFE0;
+$clr-sky:#6FF9FF;
 
-// +-typography
+//// +-typography
+// fonts are loaded in lmnt-webfonts.liquid
 
+@font-face {
+    font-family: 'Otama';
+    src: url('{{ asset_url }}/otama.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// body
+$fnt-body: 'Heebo', 'Helvetica', 'Tahoma', sans-serif;
+$fnt-header: 'Otama', 'Abril Fatface', 'Didot', serif;
+$fnt-quote: 'Lato', sans-serif;
+
+// selection
+::-moz-selection {
+  background: $clr-pink;
+  opacity:100%;
+  color:$clr-black;
+ }
+::selection {
+  background: $clr-pink;
+  opacity:100%;
+  color:$clr-black;
+ }
 
 
 // *****************************
@@ -676,19 +711,19 @@ $base:45px;
 
 
 
-// +-nav
+//// +-nav
 
 
 
-// +-footer
+//// +-footer
 
 
 
-// +-rows
+//// +-rows
 
 
 
-// +-columns
+//// +-columns
 
 
 
@@ -701,19 +736,19 @@ $base:45px;
 // *****************************
 // *****************************
 
-// +-buttons
+//// +-buttons
 
 
 
-// +-sections
+//// +-sections
 
 
 
-// +-articles
+//// +-articles
 
 
 
-// +-content
+//// +-content
 
 
 
