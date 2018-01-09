@@ -5,12 +5,20 @@ assets/Adobe Photoshop CC 201773950747129460:
   development: 2018-01-08T04:50:12-05:00
 assets/Adobe Photoshop CC 201773950747326254:
   development: 2018-01-08T04:53:18-05:00
+assets/Adobe Photoshop CC 201773950747425334:
+  development: 2018-01-08T14:12:22-05:00
+assets/Adobe Photoshop CC 201773950747490893:
+  development: 2018-01-08T14:12:44-05:00
 assets/ajax-loader.gif:
   development: 2017-12-12T20:49:17-05:00   deca8b0ecd6974227d157b6d7068995d
 assets/gift-card.js:
   development: 2017-12-12T20:49:17-05:00   c73df2ee57cc9eb577f7a1858063495d
 assets/gift-card.scss.liquid:
   development: 2017-12-12T20:49:17-05:00   647ae860a3a785081fa97f55b66cea83
+assets/ico-circle-white.png:
+  development: 2018-01-09T01:01:41-05:00   377eeb48942773ff2abcbf5b1bb07732
+assets/ico-circle.png:
+  development: 2018-01-09T01:01:56-05:00   248f70d7021c10b53aa8fb6c02674e76
 assets/ico-crosshair-white.png:
   development: 2018-01-08T04:53:18-05:00   dd3dd6e63af67b463c544071117d2049
 assets/ico-crosshair.png:
@@ -21,6 +29,8 @@ assets/jquery-3.2.1.min.js:
   development: 2018-01-08T01:57:58-05:00   c9f5aeeca3ad37bf2aa006139b935f0a
 assets/lazysizes.js:
   development: 2017-12-12T20:49:17-05:00   a27b15d827d7a26f9fa58fb6b4f9d4b6
+assets/main.js:
+  development: 2018-01-09T03:01:17-05:00   1c024a77463e91009aaab269e9c9a31a
 assets/match-media.min.js:
   development: 2017-12-12T20:49:17-05:00   d0bf06c458a236dcca39b3be8cf80ec5
 assets/otama.woff:
@@ -54,7 +64,7 @@ assets/slide-carat-left.png:
 assets/slide-carat-right.png:
   development: 2018-01-08T05:07:10-05:00   2c00d692c0e50fb0d5962c0b694ed9b8
 assets/styles.scss.liquid:
-  development: 2018-01-08T05:14:19-05:00   8785db7f4b4506c2ff9448c7e933af3c
+  development: 2018-01-09T03:11:38-05:00   0583607386fe5cb7e31754dd1644d168
 assets/theme.js.liquid:
   development: 2018-01-08T02:03:21-05:00   a390a613cb501235e64059969fca9891
 assets/theme.scss.liquid:
@@ -70,7 +80,7 @@ layout/gift_card.liquid:
 layout/password.liquid:
   development: 2017-12-12T20:49:18-05:00   6351674ea67c53e01643a5bea02f7d0a
 layout/theme.liquid:
-  development: 2018-01-08T05:11:34-05:00   ac359ba549bb8bc984657d63cffce251
+  development: 2018-01-09T03:05:17-05:00   c70253fa3ddd1fcdcaa2f980a37997b9
 locales/de.json:
   development: 2017-12-12T20:49:18-05:00   b7cd7749b0a0d9df967227ee73bcbb7f
 locales/en.default.json:
@@ -88,7 +98,7 @@ locales/pt-BR.json:
 locales/pt-PT.json:
   development: 2017-12-12T20:49:19-05:00   9753246c7cfeeb72638f4df3170e0566
 sections/lmnt-home-slider.liquid:
-  development: 2018-01-08T05:18:58-05:00   629aec7fe3f82c9361df80e1ad58a801
+  development: 2018-01-08T14:20:39-05:00   d932e534aec115323d17bb9a1313da37
 sections/password-content.liquid:
   development: 2017-12-12T20:49:16-05:00   a3f9a878372b9cc4908dedc0257b9c0e
 sections/password-footer.liquid:
@@ -104,19 +114,23 @@ snippets/comment.liquid:
 snippets/google-fonts.liquid:
   development: 2017-12-12T20:49:19-05:00   377ddc183ac7882100f47299bb8e0467
 snippets/ico-brandmark.liquid:
-  development: 2018-01-08T04:57:27-05:00   a6637c35b435f3f6c4a0c341290daf4b
+  development: 2018-01-09T02:46:44-05:00   ff79303a2d247a9eefa10966018f7f4a
 snippets/ico-cart.liquid:
   development: 2018-01-08T02:24:04-05:00   c2d60f35ddc88e739c596b8d007c5edb
+snippets/ico-wordmark-stack.liquid:
+  development: 2018-01-09T01:04:40-05:00   015f4b0ab478370bb5d663b800099013
 snippets/image-style.liquid:
   development: 2017-12-12T20:49:20-05:00   2d807ad1f4831d306d8e190b89d45c00
 snippets/lmnt-footer.liquid:
   development: 2018-01-08T01:43:59-05:00   2e74a405a2e2d7d1f1da1478aed1f3ce
+snippets/lmnt-nav-overlay.liquid:
+  development: 2018-01-09T02:56:46-05:00   f3243f0ad34f2a6042a6c505c43b4760
 snippets/lmnt-nav-sub.liquid:
-  development: 2018-01-08T03:20:26-05:00   a99e7d2261ce9e63a65a0403f77f11a9
+  development: 2018-01-09T02:51:34-05:00   feb4973d19f1a14c9930d27009b0c057
 snippets/lmnt-nav-uni.liquid:
   development: 2018-01-08T03:56:21-05:00   cbd06ae4148025eefc3f53a843928c79
 snippets/lmnt-nav.liquid:
-  development: 2018-01-08T03:20:51-05:00   ee52f87ba79deb6bff02ce127ba554af
+  development: 2018-01-09T01:03:16-05:00   901f049e415aeb1cac7e9d1d76901a2f
 snippets/lmnt-webfonts.liquid:
   development: 2018-01-08T01:26:51-05:00   ba99b6d90b03ea1dbd05a6f010132a9a
 snippets/no-blocks.liquid:

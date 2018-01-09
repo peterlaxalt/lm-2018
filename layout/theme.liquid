@@ -78,7 +78,7 @@
   {{ content_for_header }}
 </head>
 
-<body class="lmnt-page-{{ template | split: '.' | first }}">
+<body class="lmnt-page-{{ template | split: '.' | first }} lmnt-body">
 
   {% include 'lmnt-nav' %}
 
@@ -91,6 +91,7 @@
   </div>
 
   {% include 'lmnt-footer' %}
-
+  {{ 'main.js' | asset_url | script_tag }}
+  
 </body>
 </html>

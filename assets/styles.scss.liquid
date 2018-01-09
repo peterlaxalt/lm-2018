@@ -647,6 +647,59 @@ body {
 
 // slides
 
+@keyframes slide-from-top {
+  0% {
+		transform:translateY(-50%);
+	  opacity:0;
+  }
+  100% {
+		transform:translateY(0%);
+	  opacity:1;
+  }
+}
+
+.lmnt-anim-slide-from-top {
+	-webkit-animation: slide-from-top 1s ease 1;
+  -moz-animation:    slide-from-top 1s ease 1;
+  -o-animation:      slide-from-top 1s ease 1;
+  animation:         slide-from-top 1s ease 1;
+}
+
+.lmnt-anim-slide-from-top-1 {
+	-webkit-animation: slide-from-top 1s ease 1;
+  -moz-animation:    slide-from-top 1s ease 1;
+  -o-animation:      slide-from-top 1s ease 1;
+  animation:         slide-from-top 1s ease 1;
+}
+
+.lmnt-anim-slide-from-top-2 {
+	-webkit-animation: slide-from-top 2s ease 1;
+  -moz-animation:    slide-from-top 2s ease 1;
+  -o-animation:      slide-from-top 2s ease 1;
+  animation:         slide-from-top 2s ease 1;
+}
+
+.lmnt-anim-slide-from-top-3 {
+	-webkit-animation: slide-from-top 3s ease 1;
+  -moz-animation:    slide-from-top 3s ease 1;
+  -o-animation:      slide-from-top 3s ease 1;
+  animation:         slide-from-top 3s ease 1;
+}
+
+.lmnt-anim-slide-from-top-4 {
+	-webkit-animation: slide-from-top 4s ease 1;
+  -moz-animation:    slide-from-top 4s ease 1;
+  -o-animation:      slide-from-top 4s ease 1;
+  animation:         slide-from-top 4s ease 1;
+}
+
+.lmnt-anim-slide-from-top-5 {
+	-webkit-animation: slide-from-top 5s ease 1;
+  -moz-animation:    slide-from-top 5s ease 1;
+  -o-animation:      slide-from-top 5s ease 1;
+  animation:         slide-from-top 5s ease 1;
+}
+
 @keyframes slide-from-bottom {
   0% {
 		transform:translateY(50%);
@@ -693,6 +746,13 @@ body {
   animation:         slide-from-bottom 4s ease 1;
 }
 
+.lmnt-anim-slide-from-bottom-5 {
+	-webkit-animation: slide-from-bottom 5s ease 1;
+  -moz-animation:    slide-from-bottom 5s ease 1;
+  -o-animation:      slide-from-bottom 5s ease 1;
+  animation:         slide-from-bottom 5s ease 1;
+}
+
 @keyframes slide-from-right {
   0% {
 		transform:translateX(50%);
@@ -737,6 +797,52 @@ body {
   -moz-animation:    slide-from-right 4s ease 1;
   -o-animation:      slide-from-right 4s ease 1;
   animation:         slide-from-right 4s ease 1;
+}
+
+@keyframes slide-from-left {
+  0% {
+		transform:translateX(-50%);
+	  opacity:0;
+  }
+  100% {
+		transform:translateY(0%);
+	  opacity:1;
+  }
+}
+
+.lmnt-anim-slide-from-left {
+	-webkit-animation: slide-from-left 1s ease 1;
+  -moz-animation:    slide-from-left 1s ease 1;
+  -o-animation:      slide-from-left 1s ease 1;
+  animation:         slide-from-left 1s ease 1;
+}
+
+.lmnt-anim-slide-from-left-1 {
+	-webkit-animation: slide-from-left 1s ease 1;
+  -moz-animation:    slide-from-left 1s ease 1;
+  -o-animation:      slide-from-left 1s ease 1;
+  animation:         slide-from-left 1s ease 1;
+}
+
+.lmnt-anim-slide-from-left-2 {
+	-webkit-animation: slide-from-left 2s ease 1;
+  -moz-animation:    slide-from-left 2s ease 1;
+  -o-animation:      slide-from-left 2s ease 1;
+  animation:         slide-from-left 2s ease 1;
+}
+
+.lmnt-anim-slide-from-left-3 {
+	-webkit-animation: slide-from-left 3s ease 1;
+  -moz-animation:    slide-from-left 3s ease 1;
+  -o-animation:      slide-from-left 3s ease 1;
+  animation:         slide-from-left 3s ease 1;
+}
+
+.lmnt-anim-slide-from-left-4 {
+	-webkit-animation: slide-from-left 4s ease 1;
+  -moz-animation:    slide-from-left 4s ease 1;
+  -o-animation:      slide-from-left 4s ease 1;
+  animation:         slide-from-left 4s ease 1;
 }
 
 // LMNT-Watch
@@ -1111,7 +1217,7 @@ nav {
 					}
 				}
 				.lmnt-hamburger {
-					cursor:pointer;
+					cursor: url({{ 'ico-circle.png' | asset_url }}) 15 15, crosshair;
 					position:relative;
 					width:45px;
 					height:45px;
@@ -1292,6 +1398,261 @@ nav {
 			}
 		}
 	}
+
+	.lmnt-nav-overlay {
+		z-index:900;
+		position:fixed;
+		left:0;
+		top:0;
+		width:100vw;
+		height:100vh;
+		background-color:$clr-main;
+		color:$clr-white;
+		display:none;
+		transition:all .5s ease;
+		opacity:0;
+		&.lmnt-nav-overlay-visible {
+			opacity:1;
+			display:block;
+			.lmnt-inner {
+				opacity:1 !important;
+			}
+		}
+		svg {
+			fill:$clr-white;
+		}
+		cursor: url({{ 'ico-circle-white.png' | asset_url }}) 15 15, crosshair;
+		a, a:hover, a:visited, a:active {
+			cursor: url({{ 'ico-circle-white.png' | asset_url }}) 15 15, crosshair;
+			color:$clr-white;
+		}
+		.lmnt-inner {
+			opacity:0;
+			display:flex;
+			height:100vh;
+			flex-direction:row;
+			justify-content:flex-start;
+			position:relative;
+			transition:all .5s ease;
+			.lmnt-nav-overlay-col-1, .lmnt-nav-overlay-col-2, .lmnt-nav-overlay-col-3, .lmnt-nav-overlay-col-4 {
+				display:flex;
+				height:100vh;
+				flex-direction:column;
+				justify-content:stretch;
+				padding:$base 0;
+			}
+			.lmnt-nav-overlay-col {
+				flex:1;
+			}
+			.lmnt-nav-overlay-col-1 {
+				// flex:1.5;
+				width:15vw;
+				.lmnt-nav-overlay-col {
+					&:first-child {
+						border-bottom:1px solid $clr-white;
+						display:flex;
+						flex-direction:column;
+						align-items:flex-end;
+						justify-content:flex-start;
+						svg {
+							width:10vw;
+							height:10vw;
+						}
+					}
+				}
+			}
+			.lmnt-nav-overlay-col-2 {
+				// flex:2;
+				width:20vw;
+				padding-left:2vw;
+				position:relative;
+				&:before {
+					content:'';
+					position:absolute;
+					right:0;
+					top:$base;
+					bottom:$base;
+					width:1px;
+					background-color:$clr-white;
+				}
+				a {
+					position:relative;
+					&:before {
+						content:'';
+						position:absolute;
+						left:0;
+						top:50%;
+						height:2px;
+						width:0%;
+						opacity:0;
+						background-color:$clr-white;
+						// transition:all 1s ease;
+					}
+					&:hover {
+						&:before {
+							width:100%;
+							opacity:1;
+						}
+					}
+				}
+				.lmnt-nav-overlay-col {
+					&:nth-child(1) {
+						display:flex;
+						flex-direction:column;
+						justify-content:stretch;
+						.lmnt-nav-overlay-col {
+							&:nth-child(1) {
+								border-bottom:1px solid $clr-white;
+								display:flex;
+								flex-direction:column;
+								justify-content:flex-end;
+								padding-bottom:$base/2;
+								svg {
+									width:13vw;
+									height:8vw;
+								}
+							}
+						}
+						.nav-overlay-contact {
+							list-style-type:none;
+							display:flex;
+							flex-direction:column;
+							justify-content:flex-start;
+							font-family:$fnt-body-alt;
+							font-size:1.1vw;
+							padding-top:$base/2;
+							position:relative;
+							&:before {
+								content:'hello';
+								font-family:$fnt-body-alt;
+								color:$clr-peach;
+								position:absolute;
+								left:-35px;
+								top:10px;
+								font-size:.9vw;
+							}
+						}
+					}
+					&:nth-child(2) {
+						display:flex;
+						flex-direction:column;
+						align-items:flex-start;
+						justify-content:center;
+						font-family:$fnt-body-alt;
+						font-size:2.5vw;
+					}
+					&:nth-child(3) {
+						display:flex;
+						flex-direction:column;
+						align-items:flex-start;
+						justify-content:flex-end;
+						font-family:$fnt-body;
+						font-size:1.1vw;
+						.nav-overlay-social {
+							position:relative;
+							&:before {
+								content:'follow';
+								font-family:$fnt-body-alt;
+								color:$clr-peach;
+								position:absolute;
+								left:-35px;
+								top:-11px;
+								font-size:.9vw;
+							}
+						}
+					}
+				}
+			}
+			.lmnt-nav-overlay-col-3, .lmnt-nav-overlay-col-4 {
+				width:22vw;
+				padding:$base*2 $base/2 $base/2 $base*2;
+			}
+			.lmnt-overlay-nav-list {
+				list-style-type:none;
+				display:flex;
+				flex-direction:column;
+				justify-content:flex-start;
+				counter-reset: lmnt-overlay-nav;
+				a {
+					position:relative;
+					&:before {
+						content:'';
+						position:absolute;
+						left:0;
+						height:10px;
+						width:0%;
+						// opacity:0;
+						bottom:-5px;
+						background-color:$clr-peach;
+						transition:all 1s ease;
+					}
+					&:hover {
+						&:before {
+							width:100%;
+							// opacity:1;
+						}
+					}
+				}
+				dt {
+					position:relative;
+					font-size:3.1vw;
+					padding:$base/4 0;
+					font-family:$fnt-body-alt;
+					&:before {
+						content: counter(lmnt-overlay-nav, decimal-leading-zero);
+						counter-increment: lmnt-overlay-nav;
+						font-family:$fnt-body-alt;
+						color:$clr-peach;
+						position:absolute;
+						left:-30px;
+						top:$base/4;
+						font-size:1.2vw;
+					}
+				}
+			}
+			.lmnt-nav-overlay-header {
+				font-family:$fnt-header;
+				position:relative;
+				&:before {
+					content:'';
+					height:1px;
+					width:($base)-(10px);
+					position:absolute;
+					left:(0)-($base);
+					top:50%;
+					background-color:$clr-white;
+				}
+			}
+		}
+
+		.lmnt-hamburger {
+			position:absolute;
+			width:80px;
+			height:80px;
+			margin:0 $base/4 0 $base/2;
+			right:$base;
+			top:$base;
+			border:1px solid $clr-white;
+			.lmnt-bar {
+				height:1px;
+				width:100%;
+				background-color:$clr-white;
+				position:absolute;
+				&:first-child {
+					top:50%;
+					left:0px;
+					transform:rotate(45deg);
+					transform-origin:center center;
+				}
+				&:last-child {
+					bottom:50%;
+					left:0px;
+					transform:rotate(-45deg);
+					transform-origin:center center;
+				}
+			}
+		}
+	}
 }
 
 
@@ -1363,9 +1724,12 @@ nav {
 			align-items:flex-end;
 			justify-content:flex-start;
 			position:relative;
-			cursor: url({{ 'ico-crosshair-white.png' | asset_url }}) 41 41, crosshair;
+			background-size:cover;
+			background-position:center center;
+			background-repeat:no-repeat;
+			cursor: url({{ 'ico-circle-white.png' | asset_url }}) 15 15, crosshair;
 		  a, a:hover, a:visited, a:active {
-		    cursor: url({{ 'ico-crosshair-white.png' | asset_url }}) 41 41, crosshair;
+		    cursor: url({{ 'ico-circle-white.png' | asset_url }}) 15 15, crosshair;
 		  }
 			a, a:hover, a:active, a:focus {
 				display:block;
@@ -1441,8 +1805,11 @@ nav {
 //// +-body general
 
 body {
-	cursor: url({{ 'ico-crosshair.png' | asset_url }}) 41 41, crosshair;
+	cursor: url({{ 'ico-circle.png' | asset_url }}) 15 15, crosshair;
   a, a:hover, a:visited, a:active {
-    cursor: url({{ 'ico-crosshair.png' | asset_url }}) 41 41, crosshair;
+    cursor: url({{ 'ico-circle.png' | asset_url }}) 15 15, crosshair;
   }
+	&.scroll-lock {
+		overflow:hidden !important;
+	}
 }
