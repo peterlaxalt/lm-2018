@@ -1,3 +1,30 @@
 {% section 'lmnt-home-slider' %}
-{% section 'lmnt-home-collections' %}
+<div class="lmnt-content">
+  {% assign collections_count = 0 %}
+  {% for collection in collections %}
+    {% if collection.handle != 'frontpage' %}
+      {% include 'lmnt-home-collections' %}
+    {% endif %}
+  {% endfor %}
+</div>
 {{ content_for_index }}
+
+{% comment %}
+javascript for slide cards
+{% endcomment %}
+<!-- <script>
+{% for product in collections.all.products %}
+  {% if product.images.size > 1 %}
+    $('.lmnt-class-{{ product.handle }}').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      autoplay: true,
+      speed: 400,
+      autoplaySpeed: 6000
+    });
+
+  {% endif %}
+{% endfor %}
+</script> -->

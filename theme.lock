@@ -15,6 +15,8 @@ assets/ico-crosshair.png:
   development: 2018-01-08T04:50:44-05:00   25af6fcebb0b6870365769c17ad45196
 assets/ico-select.svg.liquid:
   development: 2017-12-12T20:49:17-05:00   28de0c672609528b7c55f6f47810784b
+assets/img-placeholder-product.png:
+  development: 2018-01-10T23:57:38-05:00   c0c1c8b8ce581b88e9c59bd0187f6411
 assets/jquery-3.2.1.min.js:
   development: 2018-01-08T01:57:58-05:00   c9f5aeeca3ad37bf2aa006139b935f0a
 assets/lazysizes.js:
@@ -54,7 +56,7 @@ assets/slide-carat-left.png:
 assets/slide-carat-right.png:
   development: 2018-01-08T05:07:10-05:00   2c00d692c0e50fb0d5962c0b694ed9b8
 assets/styles.scss.liquid:
-  development: 2018-01-10T23:29:43-05:00   debc4326cc81e92bdaa50e7aa01dd61a
+  development: 2018-01-11T02:40:59-05:00   7d2b2e38c0caedf2429428fb06bdf00c
 assets/theme.js.liquid:
   development: 2018-01-08T02:03:21-05:00   a390a613cb501235e64059969fca9891
 assets/theme.scss.liquid:
@@ -87,10 +89,8 @@ locales/pt-BR.json:
   development: 2017-12-12T20:49:19-05:00   e34f8234dadd2e978e7d60c45069cda8
 locales/pt-PT.json:
   development: 2017-12-12T20:49:19-05:00   9753246c7cfeeb72638f4df3170e0566
-sections/lmnt-home-collections.liquid:
-  development: 2018-01-10T23:24:53-05:00   c4dd5f19fea433b5f37bd9ed9f464bf6
 sections/lmnt-home-slider.liquid:
-  development: 2018-01-10T23:27:03-05:00   63fbc33b91b4042d7de4fb4504b8766b
+  development: 2018-01-11T00:06:02-05:00   1c6081effb8435197b74b7644efd9b0a
 sections/password-content.liquid:
   development: 2017-12-12T20:49:16-05:00   a3f9a878372b9cc4908dedc0257b9c0e
 sections/password-footer.liquid:
@@ -106,7 +106,7 @@ snippets/comment.liquid:
 snippets/google-fonts.liquid:
   development: 2017-12-12T20:49:19-05:00   377ddc183ac7882100f47299bb8e0467
 snippets/ico-arrow-down.liquid:
-  development: 2018-01-10T23:24:28-05:00   7b71a83e109f14b15ffee9b56c6a70b4
+  development: 2018-01-11T01:26:12-05:00   7b71a83e109f14b15ffee9b56c6a70b4
 snippets/ico-brandmark.liquid:
   development: 2018-01-09T02:46:44-05:00   ff79303a2d247a9eefa10966018f7f4a
 snippets/ico-cart.liquid:
@@ -118,7 +118,9 @@ snippets/ico-wordmark-stack.liquid:
 snippets/image-style.liquid:
   development: 2017-12-12T20:49:20-05:00   2d807ad1f4831d306d8e190b89d45c00
 snippets/lmnt-footer.liquid:
-  development: 2018-01-10T23:20:29-05:00   6966d7ecca494dd9e484b857eecd8f61
+  development: 2018-01-10T23:31:56-05:00   10769280998d2b056b725e404aaf0ef9
+snippets/lmnt-home-collections.liquid:
+  development: 2018-01-11T02:11:52-05:00   727f1f85dc24245dccafbcfa2d706814
 snippets/lmnt-nav-overlay.liquid:
   development: 2018-01-09T02:56:46-05:00   f3243f0ad34f2a6042a6c505c43b4760
 snippets/lmnt-nav-sub.liquid:
@@ -127,6 +129,8 @@ snippets/lmnt-nav-uni.liquid:
   development: 2018-01-08T03:56:21-05:00   cbd06ae4148025eefc3f53a843928c79
 snippets/lmnt-nav.liquid:
   development: 2018-01-09T01:03:16-05:00   901f049e415aeb1cac7e9d1d76901a2f
+snippets/lmnt-product-card.liquid:
+  development: 2018-01-11T02:47:40-05:00   b4c7365bcd58ae763341044796594c33
 snippets/lmnt-webfonts.liquid:
   development: 2018-01-08T01:26:51-05:00   ba99b6d90b03ea1dbd05a6f010132a9a
 snippets/no-blocks.liquid:
@@ -174,7 +178,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2017-12-12T20:49:21-05:00   16c95e9922ddd30e37f0cf018e86597c
 templates/index.liquid:
-  development: 2018-01-10T22:30:11-05:00   9cc27d3d0a4384bcc2ba7d3e1f0711c0
+  development: 2018-01-11T02:39:53-05:00   2658375302641eed6370033eba8ded2f
 templates/list-collections.liquid:
   development: 2017-12-12T20:49:21-05:00   d42f6d6957169811896f646709d353d9
 templates/page.contact.liquid:

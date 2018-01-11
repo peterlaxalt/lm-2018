@@ -845,6 +845,26 @@ body {
   animation:         slide-from-left 4s ease 1;
 }
 
+// bounce
+
+@keyframes bounce {
+	0% {
+		transform:translateY(-20%);
+	}
+	50% {
+		transform:translateY(20%);
+	}
+	100% {
+		transform:translateY(-20%);
+	}
+}
+.lmnt-anim-bounce {
+	-webkit-animation: bounce 2.5s ease infinite;
+  -moz-animation:    bounce 2.5s ease infinite;
+  -o-animation:      bounce 2.5s ease infinite;
+  animation:         bounce 2.5s ease infinite;
+}
+
 // LMNT-Watch
 // viewport based animations
 
@@ -973,7 +993,7 @@ body {
 
 
 //// +-base
-$base-max-width:1440px;
+$base-max-width:1280px;
 $base:40px;
 
 
@@ -987,6 +1007,7 @@ $clr-yellow:#FCFF5F;
 $clr-white:#ffffff;
 $clr-true-black:#302A24;
 $clr-peach:#FF8E6F;
+$clr-dust:#D2B49F;
 
 // tertiary
 $clr-pink:#FFA8CE;
@@ -995,6 +1016,7 @@ $clr-sky:#6FF9FF;
 
 body {
 	color: $clr-main;
+	background-color: $clr-ice;
 }
 
 a, a:hover, a:visited, a:active, a:focus {
@@ -1111,8 +1133,8 @@ nav {
 		top:0;
 		right:0;
 		padding:$lmnt-nav-padding;
-		z-index:600;
-		background-color:$clr-white;
+		z-index:800;
+		background-color:$clr-ice;
 		.lmnt-inner {
 			height:$lmnt-nav-height;
 			display:flex;
@@ -1129,53 +1151,52 @@ nav {
 			.lmnt-nav-left {
 				justify-content:flex-start;
 				flex:9;
+				a {
+					position:relative;
+					&:before, &:after {
+						content: '';
+				    display: block;
+				    position: absolute;
+				    bottom: 0;
+						top:100%;
+				    height: 1px;
+				    width: 0;
+					}
+					&:before {
+						content:'';
+						position:absolute;
+						left: 0;
+						top:100%;
+						opacity: 0;
+				    transition: width 0ms ease-in-out,border-bottom .25s ease-in-out, opacity .25s ease-in-out;
+					}
+					&:after {
+						right: 0;
+						// opacity: 0;
+				    border-bottom: 1px solid $clr-peach;
+				    transition: width .25s ease-in-out;
+					}
+					&:hover {
+						&:before {
+							width: 100%;
+							opacity: 1;
+					    border-bottom: 1px solid $clr-peach;
+					    transition: width .25s ease-in-out, opacity .25s ease-in-out;
+						}
+						&:after {
+							width: 100%;
+							border-bottom: 1px solid transparent;
+							transition: width 0ms ease-in-out,border-bottom 0ms ease-in-out;
+						}
+					}
+				}
 			}
 			.lmnt-nav-right {
 				justify-content:flex-end;
 				flex:2;
 			}
-
 			a, a:hover, a:active, a:visited, a:focus {
 				color:$clr-main;
-			}
-			a {
-				position:relative;
-				&:before, &:after {
-					content: '';
-			    display: block;
-			    position: absolute;
-			    bottom: 0;
-					top:100%;
-			    height: 1px;
-			    width: 0;
-				}
-				&:before {
-					content:'';
-					position:absolute;
-					left: 0;
-					top:100%;
-					opacity: 0;
-			    transition: width 0ms ease-in-out,border-bottom .25s ease-in-out, opacity .25s ease-in-out;
-				}
-				&:after {
-					right: 0;
-					// opacity: 0;
-			    border-bottom: 1px solid $clr-peach;
-			    transition: width .25s ease-in-out;
-				}
-				&:hover {
-					&:before {
-						width: 100%;
-						opacity: 1;
-				    border-bottom: 1px solid $clr-peach;
-				    transition: width .25s ease-in-out, opacity .25s ease-in-out;
-					}
-					&:after {
-						width: 100%;
-						border-bottom: 1px solid transparent;
-						transition: width 0ms ease-in-out,border-bottom 0ms ease-in-out;
-					}
-				}
 			}
 			.lmnt-nav-branding {
 				display:flex;
@@ -1214,6 +1235,9 @@ nav {
 				display:flex;
 				flex-direction:row;
 				counter-reset: lmnt-nav;
+				@media (max-width:676px) {
+					display:none;
+				}
 				dt {
 					margin-right:$base/4;
 					&:before {
@@ -1799,7 +1823,7 @@ footer {
 		padding:$base;
 		position:relative;
 		h1 {
-			font-size:8vw;
+			font-size:7vw;
 			text-align:center;
 			color:$clr-white !important;
 			padding-top:$base/2;
@@ -1841,7 +1865,16 @@ footer {
 
 //// +-rows
 
+.row-site-width {
+	width:100%;
+	max-width:$base-max-width;
+	margin:0 auto;
+}
 
+.row-full-width {
+	width:100%;
+	max-width:100%;
+}
 
 //// +-columns
 
@@ -1862,9 +1895,13 @@ footer {
 	padding:$base/4 $base/2;
 	font-family:$fnt-body;
 	text-decoration:none;
+	position:relative;
 	// colors
 	&.lmnt-btn-clr-white {
 		color:$clr-white !important;
+	}
+	&.lmnt-btn-clr-main {
+		color:$clr-main !important;
 	}
 	// styles
 	&.lmnt-btn-line {
@@ -1904,6 +1941,23 @@ footer {
 		&.lmnt-btn-clr-white {
 			&:before, &:after {
 				border-bottom-color:$clr-white;
+			}
+		}
+		&.lmnt-btn-clr-main {
+			color:$clr-main !important;
+			display:flex;
+			flex-direction:row;
+			align-items:center;
+			svg {
+				stroke:$clr-main !important;
+				transform:rotate(-90deg) translateY(-20px);
+				transform-origin:center center;
+				transition:all .5s ease;
+			}
+			&:hover {
+				svg {
+					transform:rotate(-90deg) translateY(-15px);
+				}
 			}
 		}
 		// the transition
@@ -1975,8 +2029,25 @@ footer {
 		// mix-blend-mode:screen;
 		@extend .lmnt-anim-slide-from-right-3;
 	}
+	.lmnt-scroll-down {
+		position:absolute;
+		right:$lmnt-nav-size/2;
+		bottom:$lmnt-nav-size/4;
+		color:$clr-main;
+		z-index:200;
+		@extend .txt-caption;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		svg {
+			stroke:$clr-main;
+			margin-left:$base/4;
+			@extend .lmnt-anim-bounce;
+		}
+	}
 	.lmnt-slide {
-		padding:$lmnt-nav-size $lmnt-nav-size/2 $lmnt-nav-size/2 $lmnt-nav-size;
+		padding:$lmnt-nav-size $lmnt-nav-size/2 $lmnt-nav-size $lmnt-nav-size;
 		height:100vh;
 		width:100vw;
 		display:flex !important;
@@ -2050,12 +2121,301 @@ footer {
 	}
 }
 
+// lmnt-collection-loop
+
+.lmnt-collection-loop {
+	padding:0 $base;
+	@media (max-width:676px) {
+		padding:0 $base/4;
+	}
+	.row-head {
+		width:100%;
+		display:flex;
+		flex-direction:row;
+		justify-content:flex-start;
+		align-items:center;
+		span {
+			color:$clr-peach;
+			font-family:$fnt-header;
+			font-size:3vw;
+			padding-right:$base*2;
+			margin-right:$base/4;
+			position:relative;
+			&:before {
+				content:'';
+				position:absolute;
+				top:50%;
+				right:0;
+				transform:translateY(-50%);
+				height:1px;
+				width:($base*2)-($base/4);
+				background-color:$clr-main;
+			}
+		}
+		h3 {
+			font-family:$fnt-body-alt;
+			color:$clr-main;
+			text-transform:lowercase;
+			font-size:3vw;
+			letter-spacing:2px;
+			line-height:0;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+		}
+	}
+	.row-cta {
+		width:100%;
+		display:flex;
+		flex-direction:row;
+		justify-content:center;
+		align-items:center;
+		padding:$base $base*2;
+		border-bottom: 1px solid $clr-main;
+		padding-bottom:($base*2)-($base/2);
+		margin-bottom:$base*2;
+		.lmnt-btn {
+			font-family:$fnt-body-alt;
+			font-size:2vw;
+			letter-spacing:1px;
+			text-transform: capitalize;
+		}
+	}
+	&:last-child {
+		.row-cta {
+			border-bottom:none;
+			padding-bottom:($base*2)-($base/2);
+		}
+	}
+	.content {
+		display:flex;
+		width:100%;
+		flex-direction:row;
+		justify-content:space-around;
+		align-items:flex-end;
+		flex-wrap:wrap;
+	}
+}
+
 
 //// +-articles
 
 
 
 //// +-content
+
+// lmnt-product-card
+.lmnt-product-card {
+	padding:$base/2;
+	background-color:darken($clr-ice,0%);
+	border-radius:0px;
+	transition:background-color 0s linear;
+	@media (max-width:676px) {
+		padding:$base/4 0;
+	}
+	&:hover {
+		background-color:darken($clr-ice,2%);
+	}
+	&.lmnt-product-card-half {
+		flex: 0 1 50%;
+		@media (max-width:676px) {
+			flex: 0 1 100%;
+		}
+		.lmnt-product-card-inner {
+			display:flex;
+			flex-direction:column;
+			background-color:$clr-white;
+			.lmnt-product-anchor {
+				display:flex;
+				flex-direction:column;
+			}
+			.lmnt-product-card-top {
+				display:flex;
+				position:relative;
+				flex-direction:row;
+				justify-content:center;
+				align-items:center;
+				&.lmnt-product-card-slide, &.lmnt-product-card-cover {
+					display:flex;
+					position:relative;
+					flex-direction:row;
+					justify-content:center;
+					align-items:center;
+				}
+				.lmnt-product-card-cover {
+					padding:$base;
+				}
+				.lmnt-product-card-slide {
+					background-size:cover;
+					background-repeat:no-repeat;
+					background-position:center center;
+				}
+			}
+			.lmnt-product-card-bottom {
+				display:flex;
+				flex-direction:row;
+				justify-content:space-between;
+				align-items:center;
+				flex-wrap:nowrap;
+				padding:$base;
+				.lmnt-product-title, .lmnt-product-price {
+					font-size:calc(.00485*100vw + 14.18182px);
+					font-family:$fnt-body;
+					font-weight:bold;
+					flex:1;
+					display:flex;
+					flex-direction:column;
+				}
+				.lmnt-product-title {
+					color:$clr-main;
+					padding-right:$base/2;
+					.lmnt-product-detail {
+						color:$clr-dust !important;
+					}
+				}
+				.lmnt-product-price {
+					color:$clr-main !important;
+					align-items:flex-end;
+					.lmnt-product-price-inner {
+						display:flex;
+						flex-direction:column;
+						justify-content:center;
+						align-items:center;
+					}
+					.lmnt-add-to-cart {
+						height:($base)+($base/4);
+						width:($base)+($base/4);
+						display:flex;
+						flex-direction:column;
+						justify-content:center;
+						align-items:center;
+						margin-bottom:$base/4;
+						background-color:rgba($clr-main,1);
+						border:1px solid rgba($clr-main,0);
+						border-radius:3px;
+						transition:all 0s ease;
+						&:hover {
+							background-color:rgba($clr-white,1);
+							border:1px solid rgba($clr-main,1);
+							.bar {
+								background-color:$clr-main;
+							}
+						}
+						.bar {
+							height:1px;
+							width:$base;
+							background-color:$clr-white;
+							&:first-child {
+								transform:rotate(90deg);
+								transform-origin:center center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.lmnt-product-card-full {
+		flex: 0 1 100%;
+		.lmnt-product-card-inner {
+			display:flex;
+			flex-direction:row;
+			flex-wrap:nowrap;
+			background-color:$clr-white;
+			.lmnt-product-anchor {
+				display:flex;
+				flex-direction:row;
+				flex-wrap:nowrap;
+			}
+			.lmnt-product-card-top {
+				display:flex;
+				position:relative;
+				flex-direction:row;
+				justify-content:center;
+				align-items:center;
+				width:50%;
+				&.lmnt-product-card-slide, &.lmnt-product-card-slide-cover {
+					display:flex;
+					position:relative;
+					flex-direction:row;
+					justify-content:center;
+					align-items:center;
+					width:100%;
+				}
+				.lmnt-product-card-slide-cover {
+					padding:$base;
+				}
+			}
+			.lmnt-product-card-bottom {
+				display:flex;
+				flex-direction:column;
+				justify-content:center;
+				align-items:flex-start;
+				flex-wrap:nowrap;
+				padding:$base*2;
+				width:50%;
+				.lmnt-product-title, .lmnt-product-price {
+					font-size:calc(.00485*100vw + 14.18182px);
+					font-family:$fnt-body;
+					font-weight:bold;
+					display:flex;
+					flex-direction:column;
+				}
+				.lmnt-product-title {
+					color:$clr-main;
+					padding-right:$base/2;
+					padding-bottom:$base/4;
+					span {
+						&:first-child {
+							font-size:3vw;
+							line-height:1;
+						}
+					}
+					.lmnt-product-detail {
+						color:$clr-dust !important;
+					}
+				}
+				.lmnt-product-price {
+					color:$clr-main !important;
+					.lmnt-product-price-inner {
+						display:flex;
+						flex-direction:row;
+						justify-content:flex-start;
+						align-items:center;
+					}
+					.lmnt-add-to-cart {
+						height:($base)+($base/4);
+						width:($base)+($base/4);
+						display:flex;
+						flex-direction:column;
+						justify-content:center;
+						align-items:center;
+						background-color:rgba($clr-main,1);
+						border:1px solid rgba($clr-main,0);
+						border-radius:3px;
+						transition:all 0s ease;
+						margin-right:$base/4;
+						&:hover {
+							background-color:rgba($clr-white,1);
+							border:1px solid rgba($clr-main,1);
+							.bar {
+								background-color:$clr-main;
+							}
+						}
+						.bar {
+							height:1px;
+							width:$base;
+							background-color:$clr-white;
+							&:first-child {
+								transform:rotate(90deg);
+								transform-origin:center center;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
 
 
 // *****************************
@@ -2076,5 +2436,8 @@ body {
   }
 	&.scroll-lock {
 		overflow:hidden !important;
+	}
+	.lmnt-content {
+		padding:0 $lmnt-nav-size/2 0 $lmnt-nav-size;
 	}
 }
