@@ -14,3 +14,39 @@
     unavailable: {{ 'products.product.unavailable' | t | json }}
   }
 </script>
+
+<div class="lmnt-content">
+  <div class="lmnt-product" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="product" data-enable-history-state="true">
+    <meta itemprop="name" content="{{ product.title }}">
+    <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
+    <meta itemprop="image" content="{{ product.featured_image.src | img_url: '800x' }}">
+    <div class="lmnt-product-inner">
+      <div class="lmnt-product-images">
+        {% for image in product.images %}
+          <img src="{{ image.src | img_url: '1800x' }}" />
+        {% endfor %}
+      </div>
+      <div class="lmnt-product-desc">
+        <div class="lmnt-product-desc-top">
+          <h1 itemprop="name">
+            {{ product.title }}
+          </h1>
+          {% if product.vendor != 'Laxalt & McIver' %}
+            <span itemprop="brand" class="lmnt-product-desc-type">
+              {{ product.vendor }}
+            </span>
+          {% endif %}
+          <a href="#" class="lmnt-btn lmnt-btn-solid lmnt-btn-clr-main">
+            {% include 'ico-plus' %}
+            {{ product.price | money }} - Add to Bag
+          </a>
+        </div>
+        <div class="lmnt-product-desc-inner">
+          <p itemprop="description">
+            {{ product.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

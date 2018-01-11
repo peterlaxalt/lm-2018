@@ -1,38 +1,40 @@
-<div class="lmnt-product-card lmnt-product-card-{{ card_size }}">
-  <div class="lmnt-product-card-inner">
+<a href="{{ product.url }}" class="product-card-anchor">
+  <div class="lmnt-product-card lmnt-product-card-{{ card_size }}">
+    <div class="lmnt-product-card-inner">
 
-      <div class="lmnt-product-card-top{% if product.images.size > 1 %} lmnt-product-card-slide-wrap lmnt-class-{{ product.handle }}{% endif %}" style="background-color:#B4D7FF;">
+        <div class="lmnt-product-card-top{% if product.images.size > 1 %} lmnt-product-card-slide-wrap lmnt-class-{{ product.handle }}{% endif %}" style="background-color:#B4D7FF;">
 
-        <div class="{% if product.images.size > 1 %}lmnt-product-card-slide {% endif %}lmnt-product-card-cover">
-          <img src="{{ product.featured_image | img_url: 'x600' }}" />
+          <div class="{% if product.images.size > 1 %}lmnt-product-card-slide {% endif %}lmnt-product-card-cover">
+            <img src="{{ product.featured_image | img_url: 'x600' }}" />
+          </div>
+
         </div>
 
-      </div>
+        <div class="lmnt-product-card-bottom">
 
-      <div class="lmnt-product-card-bottom">
-
-        <div class="lmnt-product-title">
-          <span>
-            {{ product.title }}
-          </span>
-          <span class="lmnt-product-detail">
-            Peter Laxalt
-          </span>
-        </div>
-
-        <div class="lmnt-product-price">
-          <div class="lmnt-product-price-inner">
-            <a href="#" class="lmnt-add-to-cart">
-              <span class="bar"></span>
-              <span class="bar"></span>
-            </a>
+          <div class="lmnt-product-title">
             <span>
-              $80.00
+              {{ product.title }}
+            </span>
+            <span class="lmnt-product-detail">
+              Peter Laxalt
             </span>
           </div>
+
+          <div class="lmnt-product-price">
+            <div class="lmnt-product-price-inner">
+              <a href="#" class="lmnt-add-to-cart">
+                <span class="bar"></span>
+                <span class="bar"></span>
+              </a>
+              <span>
+                $80.00
+              </span>
+            </div>
+          </div>
+
         </div>
 
-      </div>
-
+    </div>
   </div>
-</div>
+</a>

@@ -56,7 +56,7 @@ assets/slide-carat-left.png:
 assets/slide-carat-right.png:
   development: 2018-01-08T05:07:10-05:00   2c00d692c0e50fb0d5962c0b694ed9b8
 assets/styles.scss.liquid:
-  development: 2018-01-11T02:40:59-05:00   7d2b2e38c0caedf2429428fb06bdf00c
+  development: 2018-01-11T04:04:19-05:00   72f6ccaf0f02f6eff69d1b184af4d9d1
 assets/theme.js.liquid:
   development: 2018-01-08T02:03:21-05:00   a390a613cb501235e64059969fca9891
 assets/theme.scss.liquid:
@@ -111,6 +111,8 @@ snippets/ico-brandmark.liquid:
   development: 2018-01-09T02:46:44-05:00   ff79303a2d247a9eefa10966018f7f4a
 snippets/ico-cart.liquid:
   development: 2018-01-08T02:24:04-05:00   c2d60f35ddc88e739c596b8d007c5edb
+snippets/ico-plus.liquid:
+  development: 2018-01-11T03:35:48-05:00   0865210d2939809aa927dee8751fb3be
 snippets/ico-wordmark-abbreviated.liquid:
   development: 2018-01-10T23:19:52-05:00   6a93851550fa36fbfca77c0d7131eb21
 snippets/ico-wordmark-stack.liquid:
@@ -120,7 +122,7 @@ snippets/image-style.liquid:
 snippets/lmnt-footer.liquid:
   development: 2018-01-10T23:31:56-05:00   10769280998d2b056b725e404aaf0ef9
 snippets/lmnt-home-collections.liquid:
-  development: 2018-01-11T02:11:52-05:00   727f1f85dc24245dccafbcfa2d706814
+  development: 2018-01-11T02:51:17-05:00   febfab9b4eca48b314a892fdbe956fc7
 snippets/lmnt-nav-overlay.liquid:
   development: 2018-01-09T02:56:46-05:00   f3243f0ad34f2a6042a6c505c43b4760
 snippets/lmnt-nav-sub.liquid:
@@ -130,7 +132,7 @@ snippets/lmnt-nav-uni.liquid:
 snippets/lmnt-nav.liquid:
   development: 2018-01-09T01:03:16-05:00   901f049e415aeb1cac7e9d1d76901a2f
 snippets/lmnt-product-card.liquid:
-  development: 2018-01-11T02:47:40-05:00   b4c7365bcd58ae763341044796594c33
+  development: 2018-01-11T03:54:49-05:00   6e64314a4d94bbeda476b9d893d5907b
 snippets/lmnt-webfonts.liquid:
   development: 2018-01-08T01:26:51-05:00   ba99b6d90b03ea1dbd05a6f010132a9a
 snippets/no-blocks.liquid:
@@ -188,6 +190,6 @@ templates/page.liquid:
 templates/password.liquid:
   development: 2017-12-12T20:49:21-05:00   30d1743d26765ce8c3fa53a3fdf9524f
 templates/product.liquid:
-  development: 2017-12-12T20:49:21-05:00   104c9411752892755502b61349a31329
+  development: 2018-01-11T03:56:17-05:00   640229ca82a37ee550bc852030661a72
 templates/search.liquid:
   development: 2017-12-12T20:49:21-05:00   6e8bfd01622f992bf20c908bfb83337d
